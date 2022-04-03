@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () async {
-                        todo!.putAt(index, updateController.text);
+                        todo!.putAt(index, titleController.text);
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text(
                           "Update Done!",
