@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_todo_list/main.dart';
+import 'package:hive_todo_list/src/ad.dart';
 import 'package:sizer/sizer.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -27,6 +28,25 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff43919B),
+      appBar: AppBar(
+        backgroundColor: Color(0xff43919B),
+        elevation: 0,
+        actions: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 4.w),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FlutterAd()));
+              },
+              icon: Image.asset(
+                "assets/ads.png",
+              ),
+            ),
+          )
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xff05595B),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
